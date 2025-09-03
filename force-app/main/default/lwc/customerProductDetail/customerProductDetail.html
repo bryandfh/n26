@@ -1,0 +1,43 @@
+
+<template>
+    <div class="slds-p-around_medium">
+        <div class="slds-text-heading_medium slds-m-bottom_medium">
+            Product Information
+        </div>
+
+        <!-- Loading spinner -->
+        <template if:true={isLoading}>
+            <div class="slds-text-align_center slds-m-around_medium">
+                <lightning-spinner alternative-text="Loading pricing information..." size="medium"></lightning-spinner>
+            </div>
+        </template>
+
+        <!-- Error state -->
+        <template if:true={error}>
+            <div class="slds-notify slds-notify_alert slds-alert_error slds-m-bottom_medium" role="alert">
+                <span class="slds-assistive-text">Error</span>
+                <h2>Unable to load pricing information</h2>
+                <p>{error.body.message}</p>
+            </div>
+        </template>
+
+        <!-- Data table -->
+        <template if:false={isLoading}>
+            <template if:true={tableData}>
+                <lightning-datatable
+                        key-field="id"
+                        data={tableData}
+                        columns={columns}
+                        hide-checkbox-column>
+                </lightning-datatable>
+            </template>
+
+            <!-- No data message -->
+            <template if:false={tableData.length}>
+                <div class="slds-text-align_center slds-m-around_large">
+                    <p class="slds-text-color_weak">No pricing information available for this product and country combination.</p>
+                </div>
+            </template>
+        </template>
+    </div>
+</template>

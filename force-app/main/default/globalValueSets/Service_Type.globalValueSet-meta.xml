@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Cost per Calendar Month</fullName>
+        <default>false</default>
+        <label>Cost per Calendar Month</label>
+    </customValue>
+    <customValue>
+        <fullName>ATM Fee in Other Currencies</fullName>
+        <default>false</default>
+        <label>ATM Fee in Other Currencies</label>
+    </customValue>
+    <customValue>
+        <fullName>Card Replacement Cost</fullName>
+        <default>false</default>
+        <label>Card Replacement Cost</label>
+    </customValue>
+    <masterLabel>Service Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

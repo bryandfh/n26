@@ -1,0 +1,31 @@
+/* Grey header background */
+.custom-datatable {
+    --slds-c-datatable-header-color-background: #f3f3f3;
+}
+
+/* Additional header styling */
+.custom-datatable .slds-table thead th {
+    background-color: #f3f3f3;
+    font-weight: 600;
+}
+
+/* Hide the column action buttons (wrap/clip text options) */
+.custom-datatable .slds-th__action-button {
+    display: none !important;
+}
+
+/* Hide dropdown menus in header */
+.custom-datatable .slds-dropdown-trigger_click {
+    display: none !important;
+}
+
+/* Hide any button elements in table headers */
+.custom-datatable thead .slds-button {
+    display: none !important;
+}
+
+/* Make sure header cells are not interactive */
+.custom-datatable .slds-th__action {
+    cursor: default;
+    pointer-events: none;
+}
